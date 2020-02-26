@@ -5,7 +5,7 @@ services:
         build: 
             context: .
             dockerfile: Dockerfile
-        container_name: profile-db
+        container_name: heron-profile-db
         image: profile-db:1.0
         environment: 
             MYSQL_ROOT_HOST: '%'
