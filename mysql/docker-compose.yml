@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+    profile-db:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        container_name: profile-db
+        image: profile-db:1.0
+        environment: 
+            MYSQL_ROOT_HOST: '%'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        ports:
+            - '10126:3306'
+        volumes:
+            - ./volumes/profile-db:/var/lib/mysql
